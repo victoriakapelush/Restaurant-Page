@@ -1,2 +1,2 @@
 # Restaurant-Page
-Coffee Shop Sample Website
+Coffee Shop Sample Website created with JavaScript.
