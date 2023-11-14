@@ -1,12 +1,26 @@
-import home from './home';
-import menu from './menu';
-import body from './body';
-import contacts from './contacts';
-import header from './header';
-import footer from './footer';
-import typingText from './typingText';
+import ourStory from './ourStory.js';
+import menu from './menu.js';
+import home from './home.js';
+import photos from './photos.js';
 
-function init() {
+function display() {
     home();
+
+    document.getElementsByClassName('linksNames')[0].addEventListener('click', function() {
+        ourStory();
+    }) 
+
+    document.getElementsByClassName('linksNames')[1].addEventListener('click', function() {
+        menu();
+    })
+
+    document.getElementsByClassName('linksNames')[2].addEventListener('click', function() {
+        photos();
+    })
+
+    document.getElementsByClassName('linksNames')[3].addEventListener('click', function() {
+        window.open("https://www.opentable.com", "_blank")
+    })
 }
-init();
+
+display();

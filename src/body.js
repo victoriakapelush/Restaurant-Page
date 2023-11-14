@@ -1,13 +1,18 @@
-function body() {
+import sectionOne from './sectionOne';
+import sectionTwo from './sectionTwo';
+import sectionThree from './sectionThree';
+import sectionFour from './sectionFour';
+import sectionFive from './sectionFive';
+import sectionSix from './sectionSix';
+import sectionSeven from './sectionSeven.js';
 
-    const body = document.getElementById('body');
-
-    body.style.margin = "0";
-    body.style.padding = "0";
-    body.style.position = "relative";
-    body.style.fontFamily = "'Grechen Fuemen', cursive";
-    body.style.color = "black";
-
+export default function body() {
+    sectionOne();
+    sectionTwo();
+    sectionThree();
+    sectionFour();
+    sectionFive();
+    sectionSix();
+    sectionSeven();
 }
 
-export default body;

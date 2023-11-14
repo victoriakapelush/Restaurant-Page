@@ -1,39 +1,24 @@
+import footer from './footer.js';
 import header from './header';
-import footer from './footer';
-import typingText from './typingText';
-import body from './body';
-import contacts from './contacts';
-import menu from './menu';
+import ourStory from './ourStory.js';
+import menu from './menu.js';
+import body from './body.js';
+import photos from './photos.js';
 
-function home() {
+export default function home() {
     header();
     body();
-    typingText();
     footer();
 
-    const container = document.getElementById('container');
-    container.style.backgroundImage = "url('./img/homePage.webp')";
-    container.style.margin = "0 0";
-    container.style.padding = "0 0";
-    container.style.backgroundSize = "cover";
-    container.style.height = "820px";
-    container.style.width = "1440px";
+    document.getElementsByClassName('linksNames')[0].addEventListener('click', function() {
+        ourStory();
+    }) 
 
-    const homeBtn = document.getElementById('Home');
-    homeBtn.addEventListener('click', function() {
-        home();
-    });
-
-    const contactsBtn = document.getElementById('Contacts');
-    contactsBtn.addEventListener('click', function() {
-        contacts();
-    });
-
-    const menuBtn = document.getElementById('Menu');
-    menuBtn.addEventListener('click', function() {
+    document.getElementsByClassName('linksNames')[1].addEventListener('click', function() {
         menu();
-    });
+    }) 
 
+    document.getElementsByClassName('linksNames')[2].addEventListener('click', function() {
+        photos();
+    })
 }
-
-export default home;
